@@ -1171,6 +1171,7 @@ gateway:
     # @default -- See values.yaml
     file: |
       {{- include "loki.nginxFile" . | indent 2 -}}
+    clientMaxBodySize: "10M"
 networkPolicy:
   # -- Specifies whether Network Policies should be created
   enabled: false
